@@ -50,7 +50,7 @@ export class BrandsService {
 
       if (brand.id === id) {
         brandDB.updatedAt = new  Date().getTime();
-        brandDB = {...brandDB, ...UpdateBrandDto}
+        brandDB = {...brandDB, ...updateBrandDto}
         return brandDB;
       }
       return brand 
@@ -61,6 +61,6 @@ export class BrandsService {
 
   remove(id: string) {
     this.brands = this.brands.filter( brand => brand.id !== id );
-    
+
   }
 }
